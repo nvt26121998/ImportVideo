@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+    <link rel="stylesheet" type="text/css" href="/libs/datatables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap4/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/libs/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="/libs/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/libs/jQuery/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="/libs/jQuery/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/libs/jQuery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/libs/datatables/dataTables.bootstrap.min.js"></script>
+
+
+    <!-- Our custom CSS -->
+    <!-- Our Custom JS -->
+    <script type="text/javascript" src="/js/video.js"></script>
+
+</head>
+<body>
+<!--<div th:replace="video_modal :: video-new-modal"></div>-->
+
+<div>
+    <h3>Video</h3>
+    <hr>
+    <table class="display" id="table">
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Id</th>
+            <th>Youtube Url</th>
+            <th>Start Date</th>
+            <th>Finish Date</th>
+            <th>CreatedTime</th>
+            <th>UpdatedTime</th>
+        </tr>
+        </thead>
+    </table>
+
+</div>
+<!-- ADD NEW MODAL-->
+<div id="add_new_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">New Youtube Url</h4>
+                <button type="button" class="close float-right" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Url</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="url">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Start Date</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <input class="form-control" id="start_date" placeholder="YYYY/MM/DD" readonly>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Finish Date</label>
+                    <div class="col-sm-8">
+                        <div class="daterangepicker"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-primary" id="id-btn-add"
+                                data-dismiss="modal">Add
+                        </button>
+                    </div>
+                    <div class="col-sm-8">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

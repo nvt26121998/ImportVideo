@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+</head>
+<body>
+<div th:fragment="video-new-modal">
+        <!-- Modal 1 -->
+        <!-- ADD NEW MODAL-->
+        <div id="add_new_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">New Youtube Url</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Url</label>
+                            <div class="col-sm-8">
+                                <div class="form-control" id="url">
+                                </div>
+                            </div>
+                            <label class="col-sm-4 col-form-label">Start Date</label>
+                            <div class="col-sm-8">
+                                <div class="daterangepicker"></div>
+                            </div>
+                            <label class="col-sm-4 col-form-label">Finish Date</label>
+                            <div class="col-sm-8">
+                                <div class="daterangepicker"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary" id="id-btn-add"
+                                        data-dismiss="modal">Add
+                                </button>
+                            </div>
+                            <div class="col-sm-8">
+                                <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
